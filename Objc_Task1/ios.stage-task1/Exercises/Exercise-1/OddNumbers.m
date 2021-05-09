@@ -10,8 +10,15 @@
 
 @implementation OddNumbers
 
+
 - (NSInteger)oddNumbers:(NSArray <NSNumber *> *)array {
-    return -1;
+    NSInteger count = 0;
+    for(NSNumber *item in array) {
+        if ([item intValue] % 2 != 0) {
+            count++;
+        }
+    }
+    return count;
 }
 
 @end
